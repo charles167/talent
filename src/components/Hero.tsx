@@ -61,7 +61,7 @@ export const Hero = () => {
                       <Button
                         size="lg"
                         variant="outline"
-                        className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg"
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
                         onClick={() => navigate("/join-talent")}
                       >
                         Join as Talent

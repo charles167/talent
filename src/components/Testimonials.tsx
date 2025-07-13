@@ -3,25 +3,25 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CTO at TechFlow",
+    // name: "Sarah Johnson",
+    // role: "CTO at TechFlow",
     content:
       "We found an exceptional senior developer through Rekrutly within days. The quality of talent and service is outstanding.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
   },
   {
-    name: "Michael Chen",
-    role: "Engineering Lead at DataScale",
+    // name: "Michael Chen",
+    // role: "Engineering Lead at DataScale",
     content:
       "The pre-vetting process saved us countless hours. Our new team members integrated seamlessly and delivered value from day one.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Product Manager at CloudNine",
+    // name: "Emily Rodriguez",
+    // role: "Product Manager at CloudNine",
     content:
       "Rekrutly's talent pool is unmatched. We've built an entire development team through their platform.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    // image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
   },
 ];
 
@@ -57,15 +57,15 @@ export const Testimonials = () => {
                 <p className="text-gray-600 mb-6">{testimonial.content}</p>
                 <div className="flex items-center">
                   <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
+                    // src={testimonial.image}
+                    // alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover mr-4"
                   />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      {testimonial.name}
+                      {/* {testimonial.name} */}
                     </h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    {/* <p className="text-sm text-gray-600">{testimonial.role}</p> */}
                   </div>
                 </div>
               </CardContent>
