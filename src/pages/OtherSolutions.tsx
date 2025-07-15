@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 
 const tracks = [
   {
-    icon: "🎨",
+    icon: "",
     title: "Product Design",
     description:
       "Learn UI/UX fundamentals, wireframing, design systems, and tools like Figma. Build a portfolio-worthy app design by the end of the program.",
   },
   {
-    icon: "📊",
+    icon: "",
     title: "Data Analysis (Python & SQL)",
     description:
       "Learn how to clean, analyze, and visualize data using Python and SQL. Ideal for analytical minds, aspiring data analysts, and problem solvers.",
   },
   {
-    icon: "🌐",
+    icon: "",
     title: "Website Development",
     description:
       "Go from zero to building functional websites using HTML, CSS, and JavaScript. Learn the basics of how the web works — by building on it.",
