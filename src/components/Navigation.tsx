@@ -21,15 +21,23 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+
           <div className="flex items-center">
-            <img
+  <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
+  TalentStream
+</span>
+
+</div>
+
+          <div className="flex items-center">
+            {/* <img
               src="/logo.png"
               alt="Logo"
               className="h-8 w-auto"
               onError={(e) => {
                 e.currentTarget.src = "https://via.placeholder.com/32x32?text=Logo";
               }}
-            />
+            /> */}  
           </div>
 
           {/* Desktop Menu */}

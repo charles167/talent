@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -7,34 +8,60 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Typewriter } from "react-simple-typewriter";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000",
+    image: "/1.jpg",
     title: "Hire Elite Tech Talent, Pre-vetted & Ready",
-    description: "Connect with top 1% of tech professionals, rigorously vetted for excellence. Scale your team with confidence.",
+    description:
+      "Connect with top 1% of tech professionals, rigorously vetted for excellence. Scale your team with confidence.",
   },
   {
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2000",
+    image: "/2.jpg",
     title: "Vetted Excellence",
-    description: "Work with the top 1% of global tech talent",
+    description: "Work with the top 1% of global tech talent.",
   },
   {
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2000",
+    image: "/3.jpg",
     title: "Seamless Integration",
-    description: "Quick onboarding and hassle-free collaboration",
+    description: "Quick onboarding and hassle-free collaboration.",
   },
 ];
 
 export const Hero = () => {
   const navigate = useNavigate();
+  const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const delay = 5000; // 5 seconds
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, delay);
+
+    return () => resetTimeout();
+  }, [current]);
 
   return (
     <div className="relative min-h-screen pt-16">
       <Carousel className="w-full" opts={{ loop: true }}>
-        <CarouselContent>
+        <CarouselContent
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+            transition: "transform 0.8s ease-in-out",
+            display: "flex",
+          }}
+        >
           {slides.map((slide, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem key={index} className="min-w-full">
               <div className="relative h-[80vh] w-full">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
@@ -45,7 +72,14 @@ export const Hero = () => {
                 <div className="relative h-full flex items-center justify-center">
                   <div className="text-center text-white px-4 animate-fade-up">
                     <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-                      {slide.title}
+                      <Typewriter
+                        words={[slide.title]}
+                        typeSpeed={50}
+                        deleteSpeed={0}
+                        delaySpeed={1000}
+                        cursor
+                        cursorStyle="_"
+                      />
                     </h1>
                     <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
                       {slide.description}
@@ -73,9 +107,32 @@ export const Hero = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+
+        <CarouselPrevious
+          onClick={() =>
+            setCurrent(current === 0 ? slides.length - 1 : current - 1)
+          }
+          className="left-4"
+        />
+        <CarouselNext
+          onClick={() => setCurrent((current + 1) % slides.length)}
+          className="right-4"
+        />
       </Carousel>
+
+      {/* Dots */}
+      <div className="flex justify-center mt-4 space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
+              current === index ? "bg-blue-600 scale-125" : "bg-gray-300"
+            }`}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };

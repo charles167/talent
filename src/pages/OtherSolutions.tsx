@@ -1,8 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const tracks = [
   {
-    icon: "🖌️",
+    icon: "🎨",
     title: "Product Design",
     description:
       "Learn UI/UX fundamentals, wireframing, design systems, and tools like Figma. Build a portfolio-worthy app design by the end of the program.",
@@ -41,8 +42,18 @@ const faqs = [
 ];
 
 const OtherSolutions: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 text-gray-800 min-h-screen overflow-x-hidden">
+    <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 text-gray-800 min-h-screen overflow-x-hidden relative">
+      {/* Floating Back Button at Top */}
+      <button
+        onClick={() => navigate("/")}
+        className="fixed top-6 left-6 bg-white/90 text-blue-700 px-4 py-2 rounded-full shadow-lg border border-blue-200 hover:bg-white hover:scale-105 transition-transform duration-200 z-50 animate-fade-in-up delay-100"
+      >
+        ← Back to Home
+      </button>
+
       {/* Hero Section */}
       <section className="text-center py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 via-purple-500/30 to-pink-400/30 blur-2xl opacity-30 -z-10" />
@@ -193,6 +204,9 @@ const OtherSolutions: React.FC = () => {
         }
         .animate-fade-in-up.delay-200 {
           animation-delay: 0.2s;
+        }
+        .animate-fade-in-up.delay-300 {
+          animation-delay: 0.3s;
         }
         @keyframes fadeInUp {
           to {
