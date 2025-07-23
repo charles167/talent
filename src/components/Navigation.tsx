@@ -24,7 +24,7 @@ export const Navigation = () => {
 
           <div className="flex items-center">
   <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
-  TalentStream
+  Rekrutly
 </span>
 
 </div>

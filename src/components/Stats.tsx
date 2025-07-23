@@ -1,6 +1,6 @@
 const stats = [
-  { number: "500+", label: "Companies Served" },
-  { number: "10,000+", label: "Vetted Talents" },
+  { number: "20+", label: "Companies Served" },
+  { number: "100+", label: "Vetted Talents" },
   { number: "48hrs", label: "Average Match Time" },
   { number: "95%", label: "Success Rate" },
 ];
