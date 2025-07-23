@@ -81,13 +81,13 @@ const OtherSolutions: React.FC = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4 animate-fade-in-up delay-300">
           <a
-            href="#apply"
+            href="https://selar.com/2003572711"
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 hover:from-blue-700 hover:to-purple-700 transition-transform"
           >
             Apply Now
           </a>
           <a
-            href="#aid"
+            href="https://selar.com/2003572711"
             className="bg-white border-2 border-blue-600 text-blue-700 px-8 py-4 rounded-xl font-bold shadow hover:bg-blue-50 transition"
           >
             Financial Aid Available
@@ -158,13 +158,13 @@ const OtherSolutions: React.FC = () => {
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 animate-fade-in-up delay-200">
           <a
-            href="#"
+            href="https://selar.com/2003572711"
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform"
           >
             Apply Now
           </a>
           <a
-            href="#aid"
+            href="https://selar.com/2003572711"
             className="bg-white border-2 border-blue-600 text-blue-700 px-8 py-4 rounded-xl font-bold shadow hover:bg-blue-50 transition"
           >
             Apply for Financial Aid
