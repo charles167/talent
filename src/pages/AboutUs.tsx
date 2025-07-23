@@ -82,8 +82,8 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { number: "500+", label: "Companies Served" },
-              { number: "10,000+", label: "Successful Projects" },
+              { number: "20+", label: "Companies Served" },
+              { number: "100+", label: "Successful Projects" },
               { number: "150+", label: "Countries Reached" }
             ].map((stat, index) => (
               <div key={index} className="p-6">

@@ -163,14 +163,14 @@ const OtherSolutions: React.FC = () => {
           >
             Apply Now
           </a>
-          <a
+          {/* <a
             href="https://selar.com/2003572711"
             className="bg-white border-2 border-blue-600 text-blue-700 px-8 py-4 rounded-xl font-bold shadow hover:bg-blue-50 transition"
           >
             Apply for Financial Aid
-          </a>
+          </a> */}
           <a
-            href="mailto:info@techbootcampnigeria.com"
+            href="mailto:rekrutly@gmail.com"
             className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold shadow hover:bg-green-700 transition"
           >
             Contact Us
