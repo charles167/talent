@@ -186,9 +186,10 @@ const OtherSolutions: React.FC = () => {
         <div className="mb-1">Empowering young Nigerians with real-world tech skills</div>
         <div className="mb-2">© 2025. All Rights Reserved.</div>
         <div className="flex justify-center gap-6 mt-4">
-          <a href="#" className="hover:text-blue-600">Instagram</a>
-          <a href="#" className="hover:text-blue-600">Slack</a>
-          <a href="mailto:info@techbootcampnigeria.com" className="hover:text-blue-600">Email Us</a>
+          <a href=" https://www.instagram.com/rekrutly_tech_bootcamp?" className="hover:text-blue-600">Instagram</a>
+          <a href=" https://www.facebook.com/share/19ZXueTqAz/?mibextid=wwXIfr" className="hover:text-blue-600">Facebook</a>
+          <a href="https://www.linkedin.com/company/rekrutly/ " className="hover:text-blue-600"> ⁠LinkedIn</a>
+          <a href="mailto:rekrutly@gmail.com" className="hover:text-blue-600">Email Us</a>
         </div>
       </footer>
 
