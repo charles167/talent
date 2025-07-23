@@ -1,75 +1,56 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    // name: "Sarah Johnson",
-    // role: "CTO at TechFlow",
-    content:
-      "We found an exceptional senior developer through Rekrutly within days. The quality of talent and service is outstanding.",
-    // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    name: "Microvest",
+    website: "https://microvest.ng",
+    logo: "https://microvest.ng/assets/images/logo.svg",
   },
   {
-    // name: "Michael Chen",
-    // role: "Engineering Lead at DataScale",
-    content:
-      "The pre-vetting process saved us countless hours. Our new team members integrated seamlessly and delivered value from day one.",
-    // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    name: "Seamfix",
+    website: "https://seamfix.com",
+    logo: "https://seamfix.com/wp-content/uploads/2022/11/Group-113110.png",
   },
   {
-    // name: "Emily Rodriguez",
-    // role: "Product Manager at CloudNine",
-    content:
-      "Rekrutly's talent pool is unmatched. We've built an entire development team through their platform.",
-    // image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    name: "Gattimo Apparel",
+    website: "https://ruffntumblekids.com",
+    logo:
+      "https://www.ruffntumblekids.com/cdn/shop/files/The_logo_1-1_170x@2x.png?v=1716990040",
+  },
+  {
+    name: "Enzo Krypton",
+    website: "https://enzokrypton.com",
+    logo:
+      "https://enzokrypton.com/wp-content/uploads/2016/10/EnzoKrypton_logo_1b.png",
   },
 ];
 
-export const Testimonials = () => {
+export const testimonials = () => {
   return (
     <div className="bg-white py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            What Our Clients Say
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join hundreds of companies that have transformed their teams with our
-            talent
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="animate-fade-up hover:shadow-lg transition-shadow duration-300"
-              style={{ animationDelay: `${index * 100}ms` }}
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+          Successful Partnerships
+        </h2>
+        <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">
+          We’ve proudly partnered with these innovative companies to build the future.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
+          {testimonials.map((testimonials, index) => (
+            <a
+              key={testimonials.name}
+              href={testimonials.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-[160px] p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow duration-300 animate-fade-up"
+              style={{ animationDelay: `${index * 100}ms`, animationFillMode: "both" }}
             >
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-current text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6">{testimonial.content}</p>
-                <div className="flex items-center">
-                  <img
-                    // src={testimonial.image}
-                    // alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      {/* {testimonial.name} */}
-                    </h4>
-                    {/* <p className="text-sm text-gray-600">{testimonial.role}</p> */}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              <img
+                src={testimonials.logo}
+                alt={testimonials.name}
+                className="mx-auto max-h-16 object-contain"
+              />
+            </a>
           ))}
         </div>
       </div>
